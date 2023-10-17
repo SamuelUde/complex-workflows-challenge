@@ -25,7 +25,7 @@ jobs:
       - name: Step one
         uses: actions/checkout@v4
       - name: Step two
-        runs: date
+        run: date
 
   depends:
     runs-on: centos-latest
@@ -33,5 +33,5 @@ jobs:
       - name: Step one
         uses: actions/checkout@v4
       - name: Step two
-        runs: date
+        run: date
     needs: [ubuntu, windows, macos]
