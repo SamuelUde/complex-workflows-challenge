@@ -7,23 +7,23 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-        run: date 
+      - run: date 
 
   windows:
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v4
-        run: Get-Date
+      - run: Get-Date
 
   macos:
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@v4
-        runs: date
+      - runs: date
 
   depends:
     runs-on: centos-latest
     steps:
       - uses: actions/checkout@v4
-        runs: date
+      - runs: date
     needs: [ubuntu, windows, macos]
