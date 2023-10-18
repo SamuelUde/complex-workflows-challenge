@@ -22,8 +22,8 @@ jobs:
       - run: date
 
   depends:
-    runs-on: centos-latest
+    runs-on: macos-13
     needs: [ubuntu, windows, macos]
     steps:
       - uses: actions/checkout@v4
-      - run: date
+      - run: df -h && ps -ef
